@@ -12,6 +12,7 @@ const Second = () => {
             console.log(er);
         })
     }
+    n()
     
   return (
     <div>
@@ -21,18 +22,18 @@ const Second = () => {
                 <th>id</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Body</th>
-                
+              
 
             </tr>
             {
                 data.map((el,i)=>(
+
                     <tr>
                         <td>{el.postId}</td>
                         <td>{el.id}</td>
                         <td>{el.name}</td>
                         <td>{el.email}</td>
-                        <td>{el.addressbody}</td>
+
                       
                     </tr>
                 ))
