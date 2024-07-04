@@ -11,7 +11,7 @@ const NewApi = () => {
         axios.get("https://service.apikeeda.com/movie", {
             headers: {
                 Authorization: token
-            }
+            }   
         })
         .then((res)=>{
             console.log(res.data.data);
@@ -19,7 +19,6 @@ const NewApi = () => {
         })
         .catch((er)=>{
             console.log(er);
-
         })
     }
     
