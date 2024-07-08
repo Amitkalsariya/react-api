@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 const NewApi = () => {
     const [data, setdata] = useState([])
-        const token = "i1720176543283ypa501624831mv"
+        const token = "a1720436012007jyy624823406dp"
     useEffect(()=>{
         test()
     },[])
@@ -26,6 +26,21 @@ const NewApi = () => {
     const handleSubmit = (values) => {
         console.log(values);
         axios.post('https://service.apikeeda.com/api/v1/gst-invoice',values,{
+            headers: {
+                "x-apikeeda-key" : token, 
+           }
+        })
+        .then((res) => {
+            console.log("success");
+            test();
+        })
+        .catch((error) =>{
+            console.log(error);
+        })
+    }
+    const deleteData = (_id) => {
+     
+        axios.delete(`https://service.apikeeda.com/api/v1/gst-invoice/${_id}`,{
             headers: {
                 "x-apikeeda-key" : token, 
            }
@@ -76,6 +91,7 @@ const NewApi = () => {
                         <th>Total Amt</th>
                         <th>Invoice No</th>
                         <th>N</th>
+                        <th>Delete</th>
                      
                     </tr>
                     {
@@ -89,6 +105,7 @@ const NewApi = () => {
                                <td>{el.totalamount}</td>
                                <td>{el.invoiceno}</td>
                                <td>{el.__v}</td>
+                               <td><button onClick={()=>{deleteData(el._id)}}>Delete</button></td>
                              
                             </tr>
                         ))
