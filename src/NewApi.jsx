@@ -44,8 +44,6 @@ const NewApi = () => {
             .then((res) => {
                 console.log("success");
                 test();
-                
-
                 setId(null)
               
             })
@@ -135,7 +133,7 @@ const NewApi = () => {
                     <th>Name </th>
                     <th>GST NO</th>
                     <th>Base Amt</th>
-                    <th>per</th>
+                    <th>per</th>    
                     <th>Total Amt</th>
                     <th>Invoice No</th>
                     <th>N</th>
