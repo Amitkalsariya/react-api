@@ -42,7 +42,7 @@ const ApiCalling = () => {
                 data.map((el , index) => (
                     <tr>
                         <td>{el._id}</td>
-                        <td>{el.firstName}</td>
+                        <td>{el.firstName}</td> 
                         <td>{el.lastName}</td>
                         <td>{el.mobileNo}</td>
                         <td>{el.email}</td>
